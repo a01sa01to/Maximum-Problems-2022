@@ -1,0 +1,35 @@
+body {
+  background-color: #fafafa;
+}
+main {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+}
+#limit ul {
+  list-style: none;
+  padding-left: 0;
+}
+p {
+  margin-left: 1em;
+}
+h3 {
+  margin-left: 1rem;
+}
+h4 {
+  margin-left: 2rem;
+}
+pre {
+  margin-left: 3rem;
+  background-color: #f0f0f0;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+}
