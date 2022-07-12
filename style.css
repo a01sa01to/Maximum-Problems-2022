@@ -27,9 +27,31 @@ h4 {
   margin-left: 2rem;
 }
 pre {
-  margin-left: 3rem;
   background-color: #f0f0f0;
   padding: 0.5em;
   border: 1px solid #ccc;
   border-radius: 0.25em;
+}
+
+h2 + pre {
+  margin-left: 1rem;
+}
+h3 + pre {
+  margin-left: 2rem;
+}
+h4 + pre {
+  margin-left: 3rem;
+}
+
+@media print{
+  body {
+    background-color: #fff;
+  }
+  main {
+    border: none;
+    box-shadow: none;
+  }
+  h2 {
+    break-before: column;
+  }
 }
