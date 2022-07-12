@@ -31,19 +31,28 @@ pre {
   padding: 0.5em;
   border: 1px solid #ccc;
   border-radius: 0.25em;
+  width: 100%;
 }
-
-h2 + pre {
+hr {
+  width: 100%;
+}
+h2 + div {
   margin-left: 1rem;
 }
-h3 + pre {
+h3 + div {
   margin-left: 2rem;
 }
-h4 + pre {
+h4 + div {
   margin-left: 3rem;
 }
+div p {
+  margin: 0.5em 0;
+}
 
-@media print{
+@media print {
+  @page {
+    size: A4 portrait;
+  }
   body {
     background-color: #fff;
   }
