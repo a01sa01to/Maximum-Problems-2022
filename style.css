@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
 body {
   background-color: #fafafa;
+  font-family: "Noto Sans JP", sans-serif;
 }
 main {
   margin: 1rem auto;
@@ -20,11 +23,12 @@ h1 {
 p {
   margin-left: 1em;
 }
-h3 {
-  margin-left: 1rem;
+h2 {
+  margin-top: 1rem;
 }
-h4 {
-  margin-left: 2rem;
+h3 {
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 pre {
   background-color: #f0f0f0;
@@ -38,15 +42,20 @@ hr {
 }
 h2 + div {
   margin-left: 1rem;
+  padding-left: 1rem;
 }
 h3 + div {
   margin-left: 2rem;
-}
-h4 + div {
-  margin-left: 3rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  border-left: 1px solid #6c757d;
 }
 div p {
   margin: 0.5em 0;
+}
+p#eop {
+  text-align: right;
 }
 
 @media print {
