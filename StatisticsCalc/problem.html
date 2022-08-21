@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>Statistics Calculation</title>
+  <script src="../common_loader.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>Statistics Calculation</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 1 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>要素数が $N$ の数列 $a_1, a_2, ..., a_N$ が与えられます。この数列の最大値、最小値、平均値、標準偏差を求めてください。また、標準偏差が整数で、100で割り切れるかどうかも調べてください。</p>
+      <p>
+        なお、用語の定義は以下の通りです。
+      <ul>
+        <li>最大値: すべての $i$ に対して、$a_i \le a_M$ となるような $a_M$</li>
+        <li>最小値: すべての $i$ に対して、$a_i \ge a_m$ となるような $a_m$</li>
+        <li>平均値: $\displaystyle \mu = \frac{1}{N} \sum_{i=1}^N a_i$</li>
+        <li>標準偏差: $\displaystyle \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^N (a_i - \mu)^2}$</li>
+      </ul>
+      </p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le N \le 100$</li>
+        <li>$-10^7 \le a_i \le 10^7$</li>
+        <li>平均値 $\mu$ は整数である</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>入力は以下の形式で標準入力から与えられる。</p>
+      <pre><code>$N$</code><br><code>$a_1$ $a_2$ ... $a_N$</code></pre>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p>最大値、最小値、平均値、標準偏差の順に1行ずつ出力せよ。続けて、標準偏差が100で割り切れる場合には <code>Yes</code> 、超えない場合には <code>No</code> を出力せよ。</p>
+      <p>なお、想定解答との絶対誤差が $10^{-5}$ 以下であれば正解として扱われる。</p>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例1</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>3<br>1 2 3</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>3<br>1<br>2.000<br>0.8164965809<br>No</pre>
+        <p>
+          まず、最大値は3、最小値は1です。<br>
+          平均値は、$(1+2+3) \div 3 = 2$ となります。<br>
+          標準偏差は $\displaystyle \sqrt{ \frac{ (-1)^2 + {0}^2 + {1}^2}{3} } = \sqrt{ \frac{2}{3} } = 0.8164965...$ です。<br>
+          標準偏差は100で割り切れないので、<code>No</code> を出力します。
+        </p>
+      </div>
+    </div>
+    <h3>例2</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>2<br>100000 -100000</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>100000<br>-100000<br>0.000<br>100000.000<br>Yes</pre>
+      </div>
+    </div>
+    <h3>例3</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>1<br>100000</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>100000<br>100000<br>100000.000<br>0.000<br>Yes</pre>
+      </div>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+
+</html>
