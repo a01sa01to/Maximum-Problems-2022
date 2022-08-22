@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>(Built-in) boolfind_run</title>
+  <script src="../../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>(Built-in) boolfind_run</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 5 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>
+        $N$ 個のファイルがあります。それぞれのファイルには、 <code>true</code> または <code>false</code> が書かれています。あなたは以下のクエリを何度でも投げることができます。
+        <ul>
+          <li><code>READ x</code>: x番目のファイルを読み込む (0-indexed)。ただし、実行には 100ms の時間がかかる。</li>
+        </ul>
+        0-indexed で $i$ 番目が <code>true</code> で、 $i+1$ 番目が <code>false</code> であるような $i$ を <code>OUTPUT i</code> の形で出力してください。
+      </p>
+      <p>$T$ 個のテストケースそれぞれについて、上の質問に答えてください。</p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le T \le 15$</li>
+        <li>$2 \le N \le 30$</li>
+        <li>$ \sum_{i=1}^T N_i \le 30$</li>
+        <li>$C_i = T \land C_{i+1} = F$ となるような $i$ は存在する ($C_i$ は $i$ 番目のファイル内容)</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>この問題は、インタラクティブな問題です。</p>
+      <p>まず、テストケース数 $T$ が与えられます。<br>続けて、テストケース1におけるファイル数 $N_1$ が与えられます。<br>クエリを投げ、質問に答えた後、次のテストケースのファイル数が与えられます。<br>このようにして全部のテストケースに答えてください</p>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p></p>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例</h3>
+    <div>
+      <table>
+        <tr><th>入力</th><th>出力</th><th>理想状態の経過時間</th><th>説明</th></tr>
+        <tr><td>2</td><td></td><td rowspan="3">0 ms</td><td>まず、テストケース数が与えられます。</td></tr>
+        <tr><td>3</td><td></td><td>ファイル数</td></tr>
+        <tr><td></td><td>READ 0</td><td>0番目のファイルを読む</td></tr>
+        <tr><td>true</td><td></td><td rowspan="2">100 ms</td><td>0番目のファイルはtrueのようです</td></tr>
+        <tr><td></td><td>READ 1</td><td>1番目のファイルを読む</td></tr>
+        <tr><td>false</td><td></td><td rowspan="4">200 ms</td><td>1番目のファイルはfalseのようです</td></tr>
+        <tr><td></td><td>OUTPUT 0</td><td>答えは 0 です</td></tr>
+        <tr><td>2</td><td></td><td>テストケース2のファイル数</td></tr>
+        <tr><td></td><td>READ 0</td><td>0番目のファイルを読む</td></tr>
+        <tr><td>true</td><td></td><td rowspan="2">300 ms</td><td>0番目のファイルはtrueのようです</td></tr>
+        <tr><td></td><td>READ 1</td><td>1番目のファイルを読む</td></tr>
+        <tr><td>false</td><td></td><td rowspan="2">400 ms</td><td>1番目のファイルはfalseのようです</td></tr>
+        <tr><td></td><td>OUTPUT 0</td><td>答えは 0 です</td></tr>
+      </table>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
