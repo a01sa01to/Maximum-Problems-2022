@@ -58,6 +58,16 @@ div p {
 p#eop {
   text-align: right;
 }
+table {
+  break-inside: avoid;
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #ccc;
+  padding: 0.3em;
+}
 
 @media print {
   @page {

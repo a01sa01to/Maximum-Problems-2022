@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Interactive Enumeration</title>
+  <script src="../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Interactive Enumeration</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 3 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>自然数 $N$ が与えられます。あなたと「ジャッジくん」で $N$ 以下の自然数を全部列挙してください。ただし、1つの整数は1度しか使うことができません。</p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le N \le 10^5$</li>
+        <li>$N$ は奇数</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入出力</h2>
+    <div id="input">
+      <p>
+        この問題は、インタラクティブな問題です。<br>
+        すなわち、あなたのプログラムとジャッジシステムが入出力を介して対話を行う形式です。
+      </p>
+      <p>
+        <ol>
+          <li>まず、標準入力から $N$ が与えられます。</li>
+          <li>あなたのプログラムで、まだ列挙されていない $N$ 以下の自然数を1つ出力してください。ただし、すでに挙げられた自然数を出力すると <code>Wrong Answer</code> となります。このこの制約下で、あなたは何らかの自然数を挙げることができることが証明できます。</li>
+          <li>「ジャッジくん」が挙げた自然数が標準入力で与えられます。すでに挙げられた自然数は入力に与えられることはありません。また、すでに全部列挙した場合には、代わりに $0$ が与えられます。</li>
+          <li>全部列挙した場合、プログラムを終了してください。</li>
+        </ol>
+      </p>
+    </div>
+    <h2>注意点</h2>
+    <div id="output">
+      <ul>
+        <li>出力するたびに標準出力をflushしてください。例えば、C++を使っている場合、毎回 <code>endl</code> をしてください。しなかった場合、結果が <code>Wrong Answer</code> あるいは <code>Time Limit Exceeded</code> になることがあります。</li>
+        <li>全部列挙した場合、すぐにプログラムを終了してください。</li>
+        <li>途中で不正な出力を行った場合、 <code>Wrong Answer</code> となります。</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例</h3>
+    <div>
+      <table>
+        <tr><th>入力</th><th>出力</th><th>説明</th></tr>
+        <tr><td>5</td><td></td><td>まず、 $N$ として5が与えられます。</td></tr>
+        <tr><td></td><td>4</td><td>あなたは 4 を挙げました。残りは {1,2,3,5} です。</td></tr>
+        <tr><td>1</td><td></td><td>ジャッジくんは 1 を挙げました。残りは {2,3,5} です。</td></tr>
+        <tr><td></td><td>2</td><td>あなたは 2 を挙げました。残りは {3,5} です。</td></tr>
+        <tr><td>3</td><td></td><td>ジャッジくんは 3 を挙げました。残りは {5} です。</td></tr>
+        <tr><td></td><td>5</td><td>あなたは 5 を挙げました。これで、$N$ 以下のすべての自然数を列挙し終えました。</td></tr>
+        <tr><td>0</td><td></td><td>$N$ 以下のすべての自然数が列挙されたので、 0 が与えられます。</td></tr>
+      </table>
+      <p>この入出力を実現するC++のコードは以下の通りです。なお、このコードをそのまま提出すると <code>Wrong Answer</code> になります。</p>
+      <pre><code>#include &lt;bits/stdc++.h&gt;</code>
+<code>using namespace std;</code>
+<code>int main() {</code>
+  <code>int n, t;</code>
+  <code>cin >> n;          // n=5</code>
+  <code>cout << 4 << endl;</code>
+  <code>cin >> t;          // t=1</code>
+  <code>cout << 2 << endl;</code>
+  <code>cin >> t;          // t=3</code>
+  <code>cout << 5 << endl;</code>
+  <code>cin >> t;          // t=0</code>
+  <code>return 0;</code>
+<code>}</code></pre>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
