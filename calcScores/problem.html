@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Calculating Scores</title>
+  <script src="../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Calculating Scores</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 1 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>$T$ 個の高校で3教科のテストが行われました。</p>
+      <p>$i$ 番目の高校では受験者は $N_i$ 人おり、そのうち $j$ 番目の人について、国語・数学・英語の成績はそれぞれ $A_{i,j}, B_{i,j}, C_{i,j}$ です。これらの合計点が高い生徒の番号 $j$ を出力してください。</p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le T \le 100$</li>
+        <li>$1 \le N_i \le 10^4$</li>
+        <li>$0 \le A_{i,j}, B_{i,j}, C_{i,j} \le 100$</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>入力は以下の形式で標準入力から与えられる。</p>
+      <pre><code>$T$</code><br><code>$N_1$</code><br><code>$A_{1,1}$ $B_{1,1}$ $C_{1,1}$</code><br><code>$A_{1,2}$ $B_{1,2}$ $C_{1,2}$</code><br><code> $\vdots$</code><br><code>$A_{1,N_1}$ $B_{1,N_1}$ $C_{1,N_1}$</code><br><code>$N_2$</code><br><code>$A_{2,1}$ $B_{2,1}$ $C_{2,1}$</code><br><code> $\vdots$</code><br><code> $\vdots$</code><br><code>$N_T$</code><br><code>$A_{T,1}$ $B_{T,1}$ $C_{T,1}$</code><br><code>$A_{T,2}$ $B_{T,2}$ $C_{T,2}$</code><br><code> $\vdots$</code><br><code>$A_{T,N_T}$ $B_{T,N_T}$ $C_{T,N_T}$</code></pre>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p>$T$ 行出力せよ。 $i$ 行目には、 $i$ 番目のテストケースについて答えよ。</p>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例1</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre><code>2</code><br><code>3</code><br><code>34 61 27</code><br><code>55 47 97</code><br><code>67 32 40</code><br><code>1</code><br><code>94 68 46</code></pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre><code>2</code><br><code>1</code></pre>
+        <ul>
+          <li>1つ目のテストケースについて考えます。<br>
+            <ul>
+              <li>1番目の人の合計点: $34+61+27=122$</li>
+              <li>2番目の人の合計点: $55+47+97=199$</li>
+              <li>3番目の人の合計点: $67+32+40=139$</li>
+            </ul>
+            以上より、最も合計点が高い人は 2 番目の人なので、 2 を出力します。</li>
+          <li>2つ目のテストケースについて、1人しかいないので、最も合計点が高い人は 1 番目の人です。よって 1 を出力します。</li>
+        </ul>
+      </div>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
