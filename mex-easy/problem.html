@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>mex (easy)</title>
+  <script src="../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>mex (easy)</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 1 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>数列 $A_1, A_2, ..., A_n$ が与えられます。この数列に含まれない、最小の非負整数を求めてください。</p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le n \le 10^5$</li>
+        <li>$0 \le A_i \le 10^9$</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>入力は以下の形式で標準入力から与えられる。</p>
+      <pre><code>$n$</code><br><code>$A_1$ $A_2$ ... $A_n$</code></pre>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p>数列に含まれない、最小の非負整数を求めてください。</p>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例1</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre><code>3</code><br><code>0 3 2</code></pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre><code>1</code></pre>
+        <p>非負整数は「0, 1, 2, 3, 4, ...」と続きますが、 0, 2, 3 は数列に含まれています。よって、 1 を出力します。</p>
+      </div>
+    </div>
+    <h3>例2</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre><code>3</code><br><code>100 200 300</code></pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre><code>0</code></pre>
+        <p>非負整数なので、 0 を含むことに注意してください。</p>
+      </div>
+    </div>
+    <h3>例3</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre><code>11</code><br><code>0 1 10 100 1000 10000 100000 1000000 10000000 100000000 1000000000</code></pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre><code>2</code></pre>
+      </div>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
