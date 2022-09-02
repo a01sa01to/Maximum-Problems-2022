@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Parsing Formula</title>
+  <script src="../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Parsing Formula</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 1 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>$T$ 個のテストケースが与えられるので、下の問題に答えてください。</p>
+      <p>
+        数式 $s_i (1 \le i \le T)$ が与えられます。数式は、以下のBNF &lt;formula&gt; に従います。
+        <pre>&lt;formula&gt; ::= (&lt;term&gt;) | (&lt;term&gt;)*(&lt;term&gt;) | (&lt;term&gt;)/(&lt;term&gt;)<br>&lt;term&gt; ::= &lt;num&gt; | &lt;term&gt;+&lt;term&gt; | &lt;term&gt;-&lt;term&gt;<br>&lt;num&gt; ::= &lt;digit&gt; | &lt;num&gt;&lt;zero&gt; | &lt;num&gt;&lt;digit&gt;<br>&lt;zero&gt; ::= 0<br>&lt;digit&gt; ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</pre>
+        この数式 (いわゆる中置記法)を、逆ポーランド記法 (後置記法) に変換し、結果を求めてください。
+      </p>
+      <p>ただし、 <code>+</code> は加算、 <code>-</code> は減算、 <code>*</code> は乗算、 <code>/</code> は除算を表します。除算については、小数点以下を切り捨ててください。</p>
+      <p>逆ポーランド記法については、こちらを参照してください: <a href="https://ja.wikipedia.org/wiki/%E9%80%86%E3%83%9D%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E8%A8%98%E6%B3%95" target="_blank" rel="noopener noreferrer">逆ポーランド記法 (Wikipedia)</a></p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le T \le 10^3$</li>
+        <li>$1 \le |s_i| \le 10^3$</li>
+        <li>計算途中の結果の絶対値が $10^9$ を超えることはない</li>
+        <li>$0$ で除算することはない</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>入力は以下の形式で標準入力から与えられる。</p>
+      <pre><code>$T$</code><br><code>$s_1$</code><br><code>$s_2$</code><br><code>$\vdots$</code><br><code>$s_T$</code></pre>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p>$2T$ 行出力せよ。$1 \le i \le T$ として、 $2i - 1$ 行目 には、 $s_i$ を逆ポーランド記法に変換した結果を、 $2i$ 行目には、その式を計算した結果を出力せよ。</p>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例1</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>3<br>(1+2-34)*(56+7)/(89)<br>(100000)<br>(12345-54321+9876-6789)/(10)</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>1 2 + 34 - 56 7 + * 89 /<br>-21<br>100000<br>100000<br>12345 54321 - 9876 + 6789 - 10 /<br>-3888</pre>
+      </div>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
