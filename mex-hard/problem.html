@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>mex (hard)</title>
+  <script src="../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>mex (hard)</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 1 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>空の集合 $S$ があります。以下のクエリが $Q$ 個与えられるので、順番に処理してください。</p>
+      <ul>
+        <li><code>INSERT x</code>: $x$ を $S$ に追加する</li>
+        <li><code>ERASE x</code>: $x$ を $S$ から取り除く</li>
+        <li><code>MEX x</code>: $S$ に含まれない、 $x$ 以上の整数を求め、出力する</li>
+      </ul>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le n \le 2 \times 10^5$</li>
+        <li>$0 \le x_i \le 2 \times 10^5$</li>
+        <li><code>INSERT</code> クエリで与えられる $x$ は、その時点で $S$ には含まれない</li>
+        <li><code>ERASE</code> クエリで与えられる $x$ は、その時点で $S$ に含まれる</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>入力は以下の形式で標準入力から与えられる。</p>
+      <pre><code>$Q$</code><br><code>$s_1$ $x_1$</code><br><code>$s_2$ $x_2$</code><br><code>$\vdots$</code><br><code>$s_Q$ $x_Q$</code></pre>
+      <p>$s_i$ は <code>INSERT</code>, <code>ERASE</code>, <code>MEX</code> のどれかである。</p>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p>$s_i$ = <code>MEX</code> を満たすクエリの回数を $q$ として、 $q$ 行出力せよ。<br>$j (1 \le j \le q)$ 行目では、 $j$ 番目の <code>MEX</code> クエリに対する答えを出力せよ。</p>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例1</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre><code>3</code><br><code>INSERT 0</code><br><code>INSERT 1</code><br><code>MEX 0</code></pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre><code>2</code></pre>
+        <p>3番目のクエリ「<code>MEX 0</code>」時点で、 $S = \{0, 1\}$ です。よって、このクエリの答えは 2 となります。</p>
+      </div>
+    </div>
+    <h3>例2</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>10<br>INSERT 0<br>MEX 0<br>MEX 1<br>MEX 2<br>INSERT 1<br>INSERT 2<br>ERASE 0<br>MEX 0<br>MEX 1<br>MEX 2</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>1<br>1<br>2<br>0<br>3<br>3</pre>
+      </div>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
