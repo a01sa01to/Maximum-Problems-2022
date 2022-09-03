@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>List 'n' Split</title>
+  <script src="../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>List 'n' Split</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 1 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>数列 $a_1, a_2, ..., a_n$ が与えられます。また、整数 $X$ が与えられます。$1 \le i \le j \le k \le l \le N$ を満たす $i,j,k,l$ について、 $a_i + a_j + a_k + a_l = X$ とすることはできますか？</p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$4 \le N \le 2 \times 10^3$</li>
+        <li>$1 \le X \le 10^{12}$</li>
+        <li>$1 \le a_i \le 10^{12}$</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>入力は以下の形式で標準入力から与えられる。</p>
+      <pre>$N$ $X$<br>$a_1$ $a_2$ ... $a_n$</pre>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p>$a_i + a_j + a_k + a_l = X$ とすることができれば <code>Yes</code> 、そうでないなら <code>No</code> を出力せよ。</p>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例1</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>5 10<br>1 2 3 4 5</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>Yes</pre>
+        <p>例えば、 $(i,j,k,l)=(1,2,3,4)$ を選ぶことによって、 $a_1 + a_2 + a_3 + a_4 = 1 + 2 + 3 + 4 = 10$ を達成できます。</p>
+      </div>
+    </div>
+    <h3>例2</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>8 314<br>159 265 3589 79 323 84 626 4338</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>No</pre>
+      </div>
+    </div>
+    <h3>例3</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>4 4<br>1 2 3 4</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>Yes</pre>
+        <p>$i,j,k,l$ は等しくても良いですが、必ずちょうど 4 つを選ぶ必要があります。</p>
+      </div>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
