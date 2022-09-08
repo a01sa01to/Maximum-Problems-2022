@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Find Substrings</title>
+  <script src="../common_loader.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Find Substrings</h1>
+    <div id="limit">
+      <ul>
+        <li>実行時間制限: 1 sec</li>
+        <li>メモリ制限: 2 GB</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>問題文</h2>
+    <div id="prob">
+      <p>長さ $N$ の文字列 $S$ と、長さ $M$ の文字列 $T$ が与えられます。$S$ の中に $T$ が何回、どこに出現するかを判定してください。</p>
+      <p>すなわち、$0 \le i \lt N-M$ を満たし、 $S_i S_{i+1} ... S_{i+M-1} = T$ となるような $i$ の個数を出力し、そのような $i$ をすべて出力してください。</p>
+      <p>ただし、上述 $i$ は 0-indexed とします。</p>
+    </div>
+    <h2>制約</h2>
+    <div id="constraint">
+      <ul>
+        <li>$1 \le M \le N \le 10^6$</li>
+      </ul>
+    </div>
+    <hr>
+    <h2>入力</h2>
+    <div id="input">
+      <p>入力は以下の形式で標準入力から与えられる。</p>
+      <pre>$N$ $M$<br>$S$<br>$T$</pre>
+    </div>
+    <h2>出力</h2>
+    <div id="output">
+      <p>$k$ を上述の条件を満たす $i$ の個数としたとき、以下の形式で出力してください。</p>
+      <pre>$k$<br>$i_1$ $i_2$ ... $i_k$</pre>
+    </div>
+    <hr>
+    <h2>入出力例</h2>
+    <h3>例1</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>5 2<br>ababa<br>ba</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>2<br>1 3</pre>
+      </div>
+    </div>
+    <h3>例2</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>10 1<br>aaaaaaaaaa<br>a</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>10<br>0 1 2 3 4 5 6 7 8 9</pre>
+      </div>
+    </div>
+    <h3>例3</h3>
+    <div>
+      <h4>入力</h4>
+      <div>
+        <pre>36 5<br>ABCdefgHIJklmnOPQrstuVWXyz0123456789<br>abcde</pre>
+      </div>
+      <h4>出力</h4>
+      <div>
+        <pre>0</pre>
+        <p>大文字・小文字は区別すること、また文字列中に数字が表れる可能性があることに注意してください。</p>
+      </div>
+    </div>
+    <p id="eop">End of Problem</p>
+  </main>
+</body>
+</html>
